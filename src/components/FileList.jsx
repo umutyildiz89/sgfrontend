@@ -18,7 +18,7 @@ function FileList() {
   const fetchFiles = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/files", {
+      const response = await fetch("https://sgbackend-production-8ed6.up.railway.app/api/files", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -30,14 +30,14 @@ function FileList() {
   };
 
   const handleDownload = (filename) => {
-    window.open(`http://localhost:5000/api/files/download/${filename}`, "_blank");
+    window.open(`https://sgbackend-production-8ed6.up.railway.app/api/files/download/${filename}`, "_blank");
   };
 
   const handleDelete = async (id) => {
     if (!window.confirm("Bu dosya silinsin mi?")) return;
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/files/${id}`, {
+      const response = await fetch(`https://sgbackend-production-8ed6.up.railway.app/api/files/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

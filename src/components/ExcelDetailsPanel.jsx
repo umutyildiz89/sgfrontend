@@ -30,7 +30,7 @@ function ExcelDetailsPanel({ files, onUpdate, readOnly }) {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/files/${fileId}/details`,
+        `https://sgbackend-production-8ed6.up.railway.app/api/files/${fileId}/details`,
         {
           method: "PUT",
           headers: {
