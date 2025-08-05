@@ -1,0 +1,114 @@
+.details-panel {
+  margin: 0 auto 30px;
+  max-width: 95vw;
+  padding: 22px 16px;
+  background: #f6f6fd;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 #4127d010;
+}
+
+.details-panel h4 {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 17px;
+  letter-spacing: 0.2px;
+  color: #5439b7;
+}
+
+/* Kartlar konteyneri - flex ile yan yana, alt satıra geçecek */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Tek bir kart - kutu görünümü */
+.details-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
+  padding: 16px 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.25s;
+}
+
+.details-card:hover {
+  box-shadow: 0 8px 25px rgb(0 0 0 / 0.15);
+}
+
+.details-card-filename {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #6e55b4;
+  border-bottom: 2px solid #d5cdf4;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.details-card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.details-card-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px; /* input ile label arası boşluk */
+  flex-wrap: nowrap;
+}
+
+/* Label genişliği kartın %40'ı kadar */
+.field-label {
+  color: #4c357b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex: 0 0 40%;
+  white-space: nowrap;
+}
+
+/* Input genişliği kalan alana göre, maksimum genişlik kartın %55'i kadar */
+.field-input {
+  flex: 1 1 auto;
+  max-width: 55%;
+  padding: 5px 8px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #d4cef2;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.15s ease-in-out;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.field-input:focus {
+  border-color: #5e3ab3;
+  background: #f5f1fe;
+}
+
+.details-save-btn {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #7565ff 60%, #37e8fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 7px 0;
+  cursor: pointer;
+  transition: background 0.16s, transform 0.11s;
+  box-shadow: 0 1px 6px 0 #7565ff23;
+}
+
+.details-save-btn:hover {
+  background: linear-gradient(90deg, #3b297c 40%, #0cc2e4 100%);
+  transform: scale(1.06);
+}

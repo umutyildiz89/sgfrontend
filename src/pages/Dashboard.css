@@ -1,0 +1,57 @@
+.dashboard-root {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e4ebf9 30%, #f0eaff 100%);
+}
+
+.dashboard-main {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 36px 2vw 28px 2vw;
+}
+
+.dashboard-info-panel {
+  width: 100%;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dashboard-content-grid {
+  display: flex;
+  gap: 38px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dashboard-upload-panel {
+  flex: 1;
+  min-width: 330px;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px 0 #7c48d62a;
+  padding: 24px 17px;
+  margin-bottom: 18px;
+}
+
+.dashboard-filelist-panel {
+  flex: 2.1;
+  min-width: 320px;
+  /* Kendi içinde responsive kalır */
+}
+
+@media (max-width: 1050px) {
+  .dashboard-content-grid {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .dashboard-upload-panel, .dashboard-filelist-panel {
+    max-width: 99vw;
+    width: 100%;
+  }
+  .dashboard-main {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}

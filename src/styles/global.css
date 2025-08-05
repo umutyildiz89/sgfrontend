@@ -1,0 +1,50 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #e4ebf9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form ve kutuları mobilde yumuşat */
+@media (max-width: 600px) {
+  .login-form,
+  .upload-container,
+  .adminpanel-container,
+  .filelist-container {
+    width: 99vw !important;
+    min-width: 0 !important;
+    max-width: 99vw !important;
+    box-sizing: border-box;
+    border-radius: 11px;
+    padding: 19px 6px !important;
+    font-size: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 7px;
+    padding: 7px 7px !important;
+    height: auto;
+    min-height: 52px;
+  }
+
+  .filelist-table th,
+  .filelist-table td {
+    padding: 6px 2px !important;
+    font-size: 0.97rem !important;
+  }
+  .adminpanel-table th,
+  .adminpanel-table td {
+    padding: 6px 2px !important;
+    font-size: 0.97rem !important;
+  }
+}
+
+/* Tablo küçük ekranlarda kaydırılabilir olsun */
+@media (max-width: 600px) {
+  .filelist-table, .adminpanel-table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
