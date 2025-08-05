@@ -19,7 +19,7 @@ function AdminPanel() {
     setLoading(true);
     setMsg("");
     try {
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch("https://sgbackend-production-8ed6.up.railway.app/api/users", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await response.json();
@@ -39,7 +39,7 @@ function AdminPanel() {
     setLoading(true);
     setMsg("");
     try {
-      const response = await fetch("http://localhost:5000/api/users/create", {
+      const response = await fetch("https://sgbackend-production-8ed6.up.railway.app/api/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function AdminPanel() {
     setLoading(true);
     setMsg("");
     try {
-      const response = await fetch(`http://localhost:5000/api/users/delete/${id}`, {
+      const response = await fetch(`https://sgbackend-production-8ed6.up.railway.app/api/users/delete/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });
