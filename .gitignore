@@ -1,10 +1,39 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
+=======
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# testing
+coverage/
+
+# production
+build/
+dist/
+
+# environment files
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+server/.env
+frontend/.env
+
+# logs
+>>>>>>> c94ea80cea599216dd876483343922d6b59644af
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
 lerna-debug.log*
 
 node_modules
@@ -27,3 +56,28 @@ dist-ssr
 .env.*
 !.env.example
 !.env.*.example
+=======
+
+# misc
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# OS
+*.swp
+
+# Optional: coverage & reports
+coverage/
+*.lcov
+
+# Optional: SASS cache
+.sass-cache
+
+# Optional: dotenv environment examples
+.env.example
+frontend/.env.example
+server/.env.example
+>>>>>>> c94ea80cea599216dd876483343922d6b59644af

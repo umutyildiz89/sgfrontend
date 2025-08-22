@@ -1,0 +1,46 @@
+.statusupdate-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.statusupdate-form select {
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: 1.3px solid #d3caf3;
+  font-size: 0.98rem;
+  outline: none;
+  min-width: 120px;
+  background: #faf8ff;
+  transition: border 0.18s;
+}
+.statusupdate-form select:focus {
+  border-color: #8f5cf7;
+}
+
+.statusupdate-form button {
+  padding: 5px 14px;
+  background: linear-gradient(90deg, #67b4ee 65%, #7c48d6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.22s, transform 0.11s;
+  box-shadow: 0 1px 6px 0 #7c48d628;
+}
+.statusupdate-form button:hover:enabled {
+  background: linear-gradient(90deg, #7c48d6 30%, #67b4ee 100%);
+  transform: scale(1.04);
+}
+
+.statusupdate-msg {
+  margin-left: 8px;
+  color: #6351d3;
+  background: #ece7fd;
+  border-radius: 7px;
+  padding: 5px 12px;
+  font-size: 0.97rem;
+}

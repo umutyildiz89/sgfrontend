@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --bg: #f8fafc;
   --card: #ffffff;
@@ -54,3 +55,18 @@ input:focus, select:focus { border-color: #2563eb66; box-shadow: 0 0 0 4px rgba(
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; }
 .header-title { font-weight: 800; font-size: 18px; }
 .header-right { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+=======
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+>>>>>>> c94ea80cea599216dd876483343922d6b59644af
