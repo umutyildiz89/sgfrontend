@@ -1,0 +1,38 @@
+/* frontend/src/components/RoleMenu.css */
+
+.role-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.menu-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--hdr-text, #111827);
+  border: 1px solid var(--hdr-border, #e5e7eb);
+  background: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+
+.menu-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--btn-accent, rgba(108,117,125,.9));
+}
+
+.menu-link.active {
+  background: var(--hdr-bg, #fff);
+  border-color: color-mix(in oklab, var(--hdr-border, #e5e7eb) 40%, #818cf8);
+}

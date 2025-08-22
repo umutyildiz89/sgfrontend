@@ -1,0 +1,101 @@
+/* genel tipografi */
+.txn-table {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue";
+  font-size: 14px;
+  color: #111827;
+}
+
+/* kaplama */
+.table-wrap {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* tablo */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table thead th {
+  background: #f3f4f6;
+  font-weight: 800;
+  letter-spacing: .2px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #eceff1;
+}
+.table thead th:last-child { border-right: none; }
+
+.table tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #eceff1;
+  border-right: 1px solid #f2f2f2;
+  background: #fff;
+}
+.table tbody td:last-child { border-right: none; }
+
+/* zebra + hover */
+.table tbody tr:nth-child(even) td { background: #fafafa; }
+.table tbody tr:hover td { background: #eef2f7; }
+
+/* hizalama */
+.left { text-align: left; }
+.num  { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* not hücresi */
+.note-cell{
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #374151;
+}
+
+/* tip rozetleri */
+.badge-type{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #111827;
+}
+.badge-type.invest { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.badge-type.withdraw { background: #fee2e2; color: #7f1d1d; border-color: #fecaca; }
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.page-btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-width: 34px;
+  font-weight: 700;
+}
+.page-btn:hover { background: #f3f4f6; }
+.page-btn.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

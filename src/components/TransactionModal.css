@@ -1,0 +1,37 @@
+.txn-modal-backdrop{
+  position: fixed; inset: 0; background: rgba(0,0,0,.25);
+  display: flex; align-items: center; justify-content: center; z-index: 50;
+}
+.txn-modal-card{
+  width: 640px; max-width: calc(100vw - 24px);
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  padding: 14px 14px 16px;
+}
+.txn-modal-header{
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;
+}
+.txn-modal-title{ font-size: 18px; font-weight: 800; }
+.txn-modal-sub{ font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 2px; }
+.badge{ font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #eef2f7; border: 1px solid #dde3ea; margin-left: 6px; }
+.badge-ret{ background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+
+.txn-form{ margin-top: 8px; }
+.txn-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.txn-field{ display: flex; flex-direction: column; gap: 6px; }
+.txn-field > span{ font-size: 12px; font-weight: 700; color: #111827; }
+.txn-field input, .txn-field select{
+  padding: 10px 12px; border-radius: 10px; border: 1px solid var(--accent-border);
+  background: #fff; color: var(--text);
+  outline: none; box-shadow: var(--shadow);
+}
+.txn-amount-usd{ padding: 10px 12px; border-radius: 10px; background: #f8fafc; border: 1px dashed #d1d5db; }
+.txn-col-span{ grid-column: 1 / -1; }
+
+.txn-modal-actions{
+  margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px;
+}

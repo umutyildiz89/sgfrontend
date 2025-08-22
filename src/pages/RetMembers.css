@@ -1,0 +1,26 @@
+.retm-header { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+.role-badge { background:#f3f6ff; padding:6px 10px; border-radius:10px; color:#333; }
+
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.toolbar .left { display:flex; gap:8px; align-items:center; }
+.toolbar .right { display:flex; gap:8px; align-items:center; }
+.search-input { padding:8px 10px; border:1px solid #ddd; border-radius:8px; min-width:280px; }
+.select { padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+.btn { background:#f7f7f7; border:1px solid #e2e2e2; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn-primary { background:#2e7dff; color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn-danger { background:#ff5555; color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer; }
+
+.form-card { background:#fff; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:16px; margin-bottom:12px; }
+.form-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.form-row { display:flex; flex-direction:column; gap:6px; }
+.form-row input[type="text"], .form-row input:not([type]) { border:1px solid #ddd; border-radius:8px; padding:8px 10px; }
+.form-actions { display:flex; gap:8px; margin-top:10px; }
+
+.table-card { background:#fff; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:0; }
+.retm-table { width:100%; border-collapse:collapse; }
+.retm-table th, .retm-table td { padding:10px; border-bottom:1px solid #eee; text-align:left; }
+.cell-main .title { font-weight:600; }
+.cell-main .sub { color:#777; font-size:12px; }
+
+.badge { background:#eee; color:#333; padding:4px 8px; border-radius:10px; font-size:12px; }
+.badge-green { background:#2ecc71; color:#fff; }

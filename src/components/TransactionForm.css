@@ -1,0 +1,117 @@
+/* kart */
+.tfm-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* hata */
+.tfm-error {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* genel kompakt grid (form için) */
+.tfm-row-compact{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.tfm-col label {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+.tfm-col input, .tfm-col select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+}
+.tfm-col input:focus, .tfm-col select:focus {
+  border-color: rgba(108,117,125,0.9);
+  box-shadow: 0 0 0 4px rgba(108,117,125,0.15);
+}
+
+/* geniş not alanı */
+.tfm-col.wide{ grid-column: span 2; }
+
+/* sağ aksiyonlar */
+.tfm-col-actions{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* badge (usd preview) */
+.badge{
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+/* buttons  */
+.btn{
+  border: 1px solid rgba(108,117,125,0.45);
+  background: #ffffff;
+  color: #1f2937;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{ transform: translateY(-1px); border-color: rgba(108,117,125,0.9); }
+.btn.primary{ background: rgba(108,117,125,0.9); color: #fff; border-color: rgba(108,117,125,0.9); }
+.btn.primary:hover{ background: rgba(90,90,90,0.95); border-color: rgba(90,90,90,0.95); }
+
+/* input içinde arama ikonu */
+.input-icon{ position: relative; }
+.input-icon .icon{
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  opacity: .6; pointer-events: none;
+}
+.input-icon input{ padding-left: 32px; }
+
+/* küçük buton ortak */
+.btn.small{ padding: 6px 10px; font-size: 13px; border-radius: 8px; }
+
+/* 🔥 FİLTRE KARTI İÇİN TEK SATIR DİZİLİM OVERRIDE (masaüstü) */
+.filters-card .tfm-row-compact{
+  grid-template-columns: 160px 160px 140px 1fr 1fr auto; /* from, to, tip, satışçı, müşteri, uygula */
+  gap: 10px;
+  align-items: end;
+}
+.filters-card .tfm-col-actions{ align-self: end; }
+
+/* responsive kırılımlar: dar ekranda 2-4 kolon */
+@media (max-width: 1100px){
+  .filters-card .tfm-row-compact{
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 780px){
+  .filters-card .tfm-row-compact{
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+  .tfm-col.wide{ grid-column: span 1; }
+}

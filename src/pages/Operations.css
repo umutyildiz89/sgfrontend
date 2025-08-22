@@ -1,0 +1,83 @@
+/* Sayfa arka planı */
+.operations-page {
+  padding: 20px;
+  background: #f7f7fb; /* nötr gri */
+}
+
+/* Grid (Tailwind’siz) */
+.ops-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+/* Kart temel stilleri (Tailwind’siz) */
+.ops-card {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1),
+              box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+              border-color 220ms cubic-bezier(.2,.8,.2,1),
+              background-color 220ms ease;
+}
+.ops-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  border-color: #dbe0ea;
+  background-color: #fff;
+}
+
+/* İçerik gövdesi */
+.ops-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* yatay merkez */
+  justify-content: center; /* dikey merkez */
+  min-height: 160px;
+  padding: 22px 18px;
+  text-align: center;
+  gap: 6px;
+}
+.ops-card-emoji { font-size: 34px; line-height: 1; user-select: none; }
+.ops-card-title { font-weight: 700; font-size: 15px; }
+.ops-card-desc  { font-size: 13px; color: #6b7280; }
+
+/* Ripple (tıklama efekti) */
+.ops-ripple {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(99,102,241,0.28), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Köşe glow’ları */
+.corner-deco {
+  position: absolute; width: 36px; height: 36px;
+  border-radius: 999px; filter: blur(14px); opacity: 0;
+  pointer-events: none; transition: opacity .24s ease, transform .24s ease;
+}
+.corner-deco.tl { left: -10px; top: -10px; background: rgba(167,139,250,0.20); }
+.corner-deco.tr { right: -10px; top: -10px; background: rgba(99,102,241,0.18); }
+.corner-deco.bl { left: -10px; bottom: -10px; background: rgba(125,211,252,0.16); }
+.corner-deco.br { right: -10px; bottom: -10px; background: rgba(244,114,182,0.16); }
+.ops-card:hover .corner-deco { opacity: .95; transform: translateY(-2px); }
+
+/* Erişilebilirlik: hareket azaltma */
+@media (prefers-reduced-motion: reduce) {
+  .ops-ripple { display: none; }
+}

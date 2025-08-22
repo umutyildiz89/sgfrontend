@@ -1,0 +1,8 @@
+/* Retention sayfası küçük vurgu – Customers.css ile uyumlu */
+.retention-page .cust-title::after{
+  content: "  •  RET müşterileri";
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-left: 6px;
+}

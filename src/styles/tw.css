@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Küçük yardımcılar (isteğe bağlı) */
+@layer components {
+  .page-container {
+    @apply mx-auto max-w-[1200px] px-4;
+  }
+  .card-hover {
+    @apply transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-cardLg;
+  }
+  .soft-ring {
+    @apply ring-1 ring-transparent hover:ring-indigo-200;
+  }
+}
+
+/* Kartlara çok hafif bir iç parıltı efekti (hover'da belli olur) */
+.ops-card-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(129,140,248,0.18), transparent 45%),
+              radial-gradient(ellipse at 70% 80%, rgba(99,102,241,0.16), transparent 40%);
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.ops-card-glow:hover::before {
+  opacity: 1;
+}

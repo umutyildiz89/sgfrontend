@@ -1,0 +1,116 @@
+:root{
+  --bg: #f7f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  /* gri tema */
+  --accent: rgba(108,117,125,0.9);
+  --accent-hover: rgba(90, 90, 90, 0.95);
+  --accent-border: rgba(108,117,125,0.45);
+
+  --green: #16a34a;
+  --red: #dc2626;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+*{ box-sizing: border-box; }
+body{ color: var(--text); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* Sayfa */
+.sp-page { padding: 16px 0; }
+
+/* ✅ Üst bar tamamen kaldırıldığı için ilgili stilleri sildik */
+
+/* Form/list kartları */
+.sp-form-card, .sp-list-card {
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.04); margin-bottom: 16px;
+}
+
+/* Form header + actions */
+.sp-form-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sp-actions { display: flex; gap: 8px; }
+
+/* Hata */
+.sp-error {
+  background: #fee2e2; color: #7f1d1d; border: 1px solid #fecaca; border-left: 4px solid #ef4444;
+  margin: 12px 0; padding: 10px 12px; border-radius: 8px; font-weight: 600;
+}
+
+/* Form grid */
+.sp-form .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 12px 0; }
+.sp-form .col label { display:block; font-weight: 700; margin-bottom: 6px; }
+.sp-form input, .sp-form select{
+  width: 100%; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid var(--accent-border); background: var(--panel); outline: none;
+  box-shadow: var(--shadow);
+}
+.sp-form input:focus, .sp-form select:focus{
+  border-color: var(--accent); transform: translateY(-1px);
+}
+.sp-form-footer { display: flex; gap: 8px; }
+
+/* Liste header + arama */
+.sp-list-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.search { max-width: 260px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--accent-border); box-shadow: var(--shadow); outline: none; }
+.search:focus{ border-color: var(--accent); transform: translateY(-1px); }
+
+/* Table */
+.table-wrap{
+  background: var(--panel);
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.table thead{ background: #e5e7eb; }
+.table th, .table td{
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #eef0f2;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.table th:last-child, .table td:last-child{ border-right: none; }
+.table tr:last-child td{ border-bottom: none; }
+.table th{ font-weight: 800; color: #111827; letter-spacing: .2px; }
+.table tbody tr:nth-child(even) td{ background: #f9fafb; }
+.table tbody tr:hover td{ background: #eef2f7; }
+.row-hover { transition: transform .12s ease; }
+.row-hover:hover { transform: translateY(-1px); }
+
+/* Buttons */
+.btn{
+  border: 1px solid var(--accent-border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{ transform: translateY(-1px); border-color: var(--accent); }
+.btn.small{ padding: 6px 10px; border-radius: 8px; }
+.btn.pill{ border-radius: 999px; }
+.btn.primary{ background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary:hover{ background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.secondary{ background: #f3f4f6; }
+
+/* Misc */
+.muted{ color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sp-form .row { grid-template-columns: 1fr; }
+}

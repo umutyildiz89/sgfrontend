@@ -1,0 +1,89 @@
+:root{
+  /* tema (Customers/RetAssignment ile aynı) */
+  --bg: #f7f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  --accent: rgba(108,117,125,0.9);
+  --accent-hover: rgba(90, 90, 90, 0.95);
+  --accent-border: rgba(108,117,125,0.45);
+
+  --green: #16a34a;
+  --red: #dc2626;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+*{ box-sizing: border-box; }
+body{ background: var(--bg); color: var(--text); }
+
+.txn-container { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+
+/* Üst başlık */
+.txn-header-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.txn-header-main .center{ flex: 1; text-align: center; }
+.txn-title{ margin: 0; font-size: 24px; font-weight: 800; letter-spacing: .2px; }
+.txn-actions{ display: flex; gap: 8px; }
+
+/* Tek satır işlem ekleme barı */
+.txn-quickadd{
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,.04);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Liste üstü başlık */
+.txn-list-area{
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,.04);
+  padding: 16px;
+}
+.txn-header{
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px;
+}
+.txn-header h2{ margin: 0; font-size: 18px; font-weight: 800; }
+
+/* durum kutuları */
+.txn-state { padding: 12px 14px; border-radius: 10px; font-weight: 600; margin-top: 8px; }
+.txn-state.info { background: #f1f5f9; color: #0f172a; }
+.txn-state.error { background: #fee2e2; color: #7f1d1d; border: 1px solid #fecaca; }
+.txn-state.empty { background: #fafafa; color: #3f3f46; border: 1px dashed #d4d4d8; }
+
+/* Genel buton stilleri (Customers ile aynı) */
+.btn{
+  border: 1px solid var(--accent-border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{ transform: translateY(-1px); border-color: var(--accent); }
+.btn.primary{ background: var(--accent); color: #fff; }
+.btn.primary:hover{ background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.secondary{ background: #f3f4f6; }
+
+/* responsive */
+@media (max-width: 1000px) {
+  .txn-header{ flex-direction: column; align-items: stretch; }
+}
+/* ...dosyanın mevcut içeriği... */
+
+/* küçük buton */
+.btn.small{ padding: 6px 10px; font-size: 13px; border-radius: 8px; }

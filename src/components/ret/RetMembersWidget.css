@@ -1,0 +1,39 @@
+.retmw-card {
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  padding:14px;
+}
+
+.retmw-header {
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  margin-bottom:10px;
+}
+.retmw-title { font-weight:700; font-size:16px; }
+.retmw-sub { color:#666; font-size:12px; }
+.retmw-link { text-decoration:none; color:#2e7dff; font-weight:600; }
+
+.retmw-toolbar { display:flex; gap:8px; align-items:center; margin-bottom:10px; }
+.retmw-input {
+  padding:8px 10px; border:1px solid #ddd; border-radius:8px; min-width:220px;
+}
+.retmw-btn {
+  background:#f7f7f7; border:1px solid #e2e2e2; padding:8px 12px; border-radius:8px; cursor:pointer;
+}
+.retmw-btn-primary {
+  background:#2e7dff; color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer;
+}
+.retmw-btn-danger {
+  background:#ff5555; color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer;
+}
+
+.retmw-form { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:10px; }
+.retmw-check { display:flex; align-items:center; gap:6px; color:#333; }
+
+.retmw-tablewrap { overflow:auto; }
+.retmw-table { width:100%; border-collapse:collapse; }
+.retmw-table th, .retmw-table td { padding:8px; border-bottom:1px solid #eee; text-align:left; }
+.retmw-title2 { font-weight:600; }
+.retmw-sub { color:#777; font-size:12px; }
+.retmw-badge { background:#eee; color:#333; padding:4px 8px; border-radius:10px; font-size:12px; }
+.retmw-badge--green { background:#2ecc71; color:#fff; }

@@ -1,0 +1,96 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+  background: color-mix(in oklab, var(--bg-elev-1) 92%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(140%) blur(12px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+  gap: var(--space-6);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: var(--brand-600);
+  background: color-mix(in oklab, var(--brand-600) 8%, var(--bg-elev-2));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-subtitle {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.env-badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  border: 1px solid var(--border);
+  background: var(--bg-elev-2);
+  color: var(--text-muted);
+}
+
+.env-badge.dev { color: var(--brand-600); }
+.env-badge.staging { color: var(--warning); }
+.env-badge.prod { color: var(--success); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.icon-btn {
+  height: 36px;
+  width: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-elev-2);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.icon-btn:hover {
+  transform: translateY(-1px);
+  background: color-mix(in oklab, var(--bg-elev-2) 80%, var(--brand-50));
+  border-color: color-mix(in oklab, var(--border) 70%, var(--brand-200));
+}
+
+.icon-btn:active {
+  transform: translateY(0);
+}
+
+.app-main {
+  padding-block: var(--space-6);
+}
